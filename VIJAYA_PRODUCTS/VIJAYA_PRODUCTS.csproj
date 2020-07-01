@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{278E47F1-05F2-44BE-BEA5-CB9A028AD502}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VIJAYA_PRODUCTS</RootNamespace>
+    <AssemblyName>VIJAYA_PRODUCTS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\Software\AjaxControlToolkit.Binary.NET40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\..\Software\AjaxControlToolkit.Binary.NET40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\SRIRAM_MILK\SRIRAM_MILK\bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SRIRAM_MILK\SRIRAM_MILK\bin\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SRIRAM_MILK\SRIRAM_MILK\bin\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\..\..\SRIRAM_MILK\SRIRAM_MILK\bin\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddClient.aspx" />
+    <Content Include="AddFund.aspx" />
+    <Content Include="AddGst.aspx" />
+    <Content Include="alertifyjs\alertify.js" />
+    <Content Include="alertifyjs\alertify.min.js" />
+    <Content Include="alertifyjs\css\alertify.css" />
+    <Content Include="alertifyjs\css\alertify.min.css" />
+    <Content Include="alertifyjs\css\alertify.rtl.css" />
+    <Content Include="alertifyjs\css\alertify.rtl.min.css" />
+    <Content Include="alertifyjs\css\themes\bootstrap.css" />
+    <Content Include="alertifyjs\css\themes\bootstrap.min.css" />
+    <Content Include="alertifyjs\css\themes\bootstrap.rtl.css" />
+    <Content Include="alertifyjs\css\themes\bootstrap.rtl.min.css" />
+    <Content Include="alertifyjs\css\themes\default.css" />
+    <Content Include="alertifyjs\css\themes\default.min.css" />
+    <Content Include="alertifyjs\css\themes\default.rtl.css" />
+    <Content Include="alertifyjs\css\themes\default.rtl.min.css" />
+    <Content Include="alertifyjs\css\themes\semantic.css" />
+    <Content Include="alertifyjs\css\themes\semantic.min.css" />
+    <Content Include="alertifyjs\css\themes\semantic.rtl.css" />
+    <Content Include="alertifyjs\css\themes\semantic.rtl.min.css" />
+    <Content Include="CashMemoPrint.aspx" />
+    <Content Include="CashVoucher.aspx" />
+    <Content Include="ClientReport.aspx" />
+    <Content Include="CreditDebit.aspx" />
+    <Content Include="css\quirk.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\200.gif" />
+    <Content Include="images\calloutvalidator.png" />
+    <Content Include="images\doc.png" />
+    <Content Include="images\docx.png" />
+    <Content Include="images\dot.png" />
+    <Content Include="images\image.png" />
+    <Content Include="images\loggeduser.png" />
+    <Content Include="images\logo-big.html" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mp3.png" />
+    <Content Include="images\mp4.png" />
+    <Content Include="images\png.png" />
+    <Content Include="images\print.png" />
+    <Content Include="images\vijayalogo.png" />
+    <Content Include="images\watermark.jpg" />
+    <Content Include="images\watermark1.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="InvoiceForm.aspx" />
+    <Content Include="Invoice_Report.aspx" />
+    <Content Include="js\charts.js" />
+    <Content Include="js\dashboard.js" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.steps.js" />
+    <Content Include="js\jquery.steps.min.js" />
+    <Content Include="js\map.apple.js" />
+    <Content Include="js\map.bluewater.js" />
+    <Content Include="js\map.mapbox.js" />
+    <Content Include="js\map.shadesofgrey.js" />
+    <Content Include="js\map.shiftworker.js" />
+    <Content Include="js\quirk.js" />
+    <Content Include="LedgerReport.aspx" />
+    <Content Include="Letterhead.aspx" />
+    <Content Include="lib\bootstrap3-wysihtml5-bower\bootstrap3-wysihtml5.all.js" />
+    <Content Include="lib\bootstrap3-wysihtml5-bower\bootstrap3-wysihtml5.css" />
+    <Content Include="lib\bootstrapcolorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="lib\bootstrapcolorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="lib\bootstrapcolorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="lib\bootstrapcolorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="lib\bootstrapcolorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="lib\bootstrapcolorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="lib\bootstrapcolorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\datatables-plugins\integration\bootstrap\3\dataTables.bootstrap.css" />
+    <Content Include="lib\datatables-plugins\integration\bootstrap\3\dataTables.bootstrap.js" />
+    <Content Include="lib\datatables\jquery.dataTables.js" />
+    <Content Include="lib\dropzone\dropzone.css" />
+    <Content Include="lib\dropzone\dropzone.js" />
+    <Content Include="lib\flot-spline\jquery.flot.spline.js" />
+    <Content Include="lib\flot\jquery.flot.categories.js" />
+    <Content Include="lib\flot\jquery.flot.crosshair.js" />
+    <Content Include="lib\flot\jquery.flot.js" />
+    <Content Include="lib\flot\jquery.flot.pie.js" />
+    <Content Include="lib\flot\jquery.flot.resize.js" />
+    <Content Include="lib\flot\jquery.flot.symbol.js" />
+    <Content Include="lib\fontawesome\css\font-awesome.css" />
+    <Content Include="lib\gmaps\gmaps.js" />
+    <Content Include="lib\handlebars\handlebars.js" />
+    <Content Include="lib\Hover\hover.css" />
+    <Content Include="lib\ionicons\css\ionicons.css" />
+    <Content Include="lib\jquery-autosize\autosize.js" />
+    <Content Include="lib\jquery-knob\jquery.knob.js" />
+    <Content Include="lib\jquery-maskedinput\jquery.maskedinput.js" />
+    <Content Include="lib\jquery-sparkline\jquery.sparkline.js" />
+    <Content Include="lib\jquery-toggles\toggles-full.css" />
+    <Content Include="lib\jquery-toggles\toggles.js" />
+    <Content Include="lib\jquery-ui\jquery-ui.css" />
+    <Content Include="lib\jquery-ui\jquery-ui.js" />
+    <Content Include="lib\jquery-validate\jquery.validate.js" />
+    <Content Include="lib\jquery.gritter\jquery.gritter.css" />
+    <Content Include="lib\jquery.gritter\jquery.gritter.js" />
+    <Content Include="lib\jquery.steps\jquery.steps.css" />
+    <Content Include="lib\jquery.steps\jquery.steps.js" />
+    <Content Include="lib\jqueryui-touch-punch\jquery.ui.touch-punch.js" />
+    <Content Include="lib\jquery\jquery.js" />
+    <Content Include="lib\modernizr\modernizr.js" />
+    <Content Include="lib\morrisjs\morris.css" />
+    <Content Include="lib\morrisjs\morris.js" />
+    <Content Include="lib\raphael\raphael.js" />
+    <Content Include="lib\select2\select2.css" />
+    <Content Include="lib\select2\select2.js" />
+    <Content Include="lib\summernote\summernote.css" />
+    <Content Include="lib\summernote\summernote.js" />
+    <Content Include="lib\timepicker\jquery.timepicker.css" />
+    <Content Include="lib\timepicker\jquery.timepicker.js" />
+    <Content Include="lib\weather-icons\css\weather-icons.css" />
+    <Content Include="lib\wysihtml5x\wysihtml5x-toolbar.js" />
+    <Content Include="lib\wysihtml5x\wysihtml5x.js" />
+    <Content Include="Material.aspx" />
+    <Content Include="POFormPrint.aspx" />
+    <Content Include="Print.aspx" />
+    <Content Include="PrintAllInvoice.aspx" />
+    <Content Include="PurchaseOrder.aspx" />
+    <Content Include="PurchaseOrderReport.aspx" />
+    <Content Include="PurchaseRegister.aspx" />
+    <Content Include="PurchaseRegisterReport.aspx" />
+    <Content Include="PurchaseReport.aspx" />
+    <Content Include="QuotationFormPrint.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="SalesReport.aspx" />
+    <Content Include="ShopInvoice_Report.aspx" />
+    <Content Include="ShopInvPrint.aspx" />
+    <Content Include="ShopsInvoice.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="SignupReport.aspx" />
+    <Content Include="Site.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClient.aspx.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddClient.aspx.designer.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFund.aspx.cs">
+      <DependentUpon>AddFund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFund.aspx.designer.cs">
+      <DependentUpon>AddFund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddGst.aspx.cs">
+      <DependentUpon>AddGst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddGst.aspx.designer.cs">
+      <DependentUpon>AddGst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashMemoPrint.aspx.cs">
+      <DependentUpon>CashMemoPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashMemoPrint.aspx.designer.cs">
+      <DependentUpon>CashMemoPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashVoucher.aspx.cs">
+      <DependentUpon>CashVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashVoucher.aspx.designer.cs">
+      <DependentUpon>CashVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientReport.aspx.cs">
+      <DependentUpon>ClientReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientReport.aspx.designer.cs">
+      <DependentUpon>ClientReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditDebit.aspx.cs">
+      <DependentUpon>CreditDebit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditDebit.aspx.designer.cs">
+      <DependentUpon>CreditDebit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="creditentry.cs" />
+    <Compile Include="DAL\Cash_Memo_Description_Management.cs" />
+    <Compile Include="DAL\Cash_Memo_Management.cs" />
+    <Compile Include="DAL\creditentry.cs" />
+    <Compile Include="DAL\CUSTOMER_RAGISTER\Client_Ragister_Management.cs" />
+    <Compile Include="DAL\CUSTOMER_RATE_PRODUCT\ClientRateProductManagement.cs" />
+    <Compile Include="DAL\FundManagement.cs" />
+    <Compile Include="DAL\Gst_Details.cs" />
+    <Compile Include="DAL\Invoice_Management.cs" />
+    <Compile Include="DAL\Invoice_Product_Management.cs" />
+    <Compile Include="DAL\Ledger.cs" />
+    <Compile Include="DAL\LOGIN DETAILS\LoginManagement.cs" />
+    <Compile Include="DAL\Material_management.cs" />
+    <Compile Include="DAL\NoInWord.cs" />
+    <Compile Include="DAL\PO-DRAFT\Po-Draft-Management.cs" />
+    <Compile Include="DAL\PrintHelper.cs" />
+    <Compile Include="DAL\PURCHASE_ORDER\Purches_Order_Management.cs" />
+    <Compile Include="DAL\PURCHASE_ORDER_PRODUCT\Purches_Order_Product_Management.cs" />
+    <Compile Include="DAL\Purchase_Register_Managment.cs" />
+    <Compile Include="DAL\Quatation_Management.cs" />
+    <Compile Include="DAL\Quotation_Product_Management.cs" />
+    <Compile Include="DAL\SendSMS\SendSMS.cs" />
+    <Compile Include="DAL\SendSMS\SendSMSJJ.cs" />
+    <Compile Include="DAL\SITE DETAILS\SiteManagement.cs" />
+    <Compile Include="DAL\USER_AUTHENTICATE_LINK\User_Authenticate_Link_Management.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceForm.aspx.cs">
+      <DependentUpon>InvoiceForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceForm.aspx.designer.cs">
+      <DependentUpon>InvoiceForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice_Report.aspx.cs">
+      <DependentUpon>Invoice_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice_Report.aspx.designer.cs">
+      <DependentUpon>Invoice_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerReport.aspx.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LedgerReport.aspx.designer.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Letterhead.aspx.cs">
+      <DependentUpon>Letterhead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Letterhead.aspx.designer.cs">
+      <DependentUpon>Letterhead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material.aspx.cs">
+      <DependentUpon>Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material.aspx.designer.cs">
+      <DependentUpon>Material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POFormPrint.aspx.cs">
+      <DependentUpon>POFormPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POFormPrint.aspx.designer.cs">
+      <DependentUpon>POFormPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintAllInvoice.aspx.cs">
+      <DependentUpon>PrintAllInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintAllInvoice.aspx.designer.cs">
+      <DependentUpon>PrintAllInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrder.aspx.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrder.aspx.designer.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrderReport.aspx.cs">
+      <DependentUpon>PurchaseOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrderReport.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseRegister.aspx.cs">
+      <DependentUpon>PurchaseRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseRegister.aspx.designer.cs">
+      <DependentUpon>PurchaseRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseRegisterReport.aspx.cs">
+      <DependentUpon>PurchaseRegisterReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseRegisterReport.aspx.designer.cs">
+      <DependentUpon>PurchaseRegisterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.designer.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuotationFormPrint.aspx.cs">
+      <DependentUpon>QuotationFormPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuotationFormPrint.aspx.designer.cs">
+      <DependentUpon>QuotationFormPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.aspx.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport.aspx.designer.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopInvoice_Report.aspx.cs">
+      <DependentUpon>ShopInvoice_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopInvoice_Report.aspx.designer.cs">
+      <DependentUpon>ShopInvoice_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopInvPrint.aspx.cs">
+      <DependentUpon>ShopInvPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopInvPrint.aspx.designer.cs">
+      <DependentUpon>ShopInvPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopsInvoice.aspx.cs">
+      <DependentUpon>ShopsInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopsInvoice.aspx.designer.cs">
+      <DependentUpon>ShopsInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignupReport.aspx.cs">
+      <DependentUpon>SignupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignupReport.aspx.designer.cs">
+      <DependentUpon>SignupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.aspx.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.aspx.designer.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="css\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="css\fonts\weathericons-regular-webfont.ttf" />
+    <None Include="css\fonts\weathericons-regular-webfont.woff" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="images\Thumbs.db" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont.eot" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont.svg" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont.woff" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont3295.eot" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont3295.svg" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont3295.ttf" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont3295.woff" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfont3295.woff2" />
+    <None Include="lib\fontawesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="lib\fontawesome\fonts\FontAwesome.otf" />
+    <None Include="lib\fontawesome\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="lib\fontawesome\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="lib\ionicons\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="lib\ionicons\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="lib\ionicons\fonts\ionicons.ttf" />
+    <None Include="lib\ionicons\fonts\ionicons.woff" />
+    <None Include="lib\ionicons\fonts\weathericons-regular-webfont.ttf" />
+    <None Include="lib\ionicons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Site1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CashMemo.rdlc" />
+    <EmbeddedResource Include="CashMemoReceipt.rdlc" />
+    <EmbeddedResource Include="Ledger.rdlc" />
+    <EmbeddedResource Include="letterhead.rdlc" />
+    <EmbeddedResource Include="Quotation.rdlc" />
+    <EmbeddedResource Include="ShopInvoice.rdlc" />
+    <EmbeddedResource Include="SparkInvoice.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1288</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

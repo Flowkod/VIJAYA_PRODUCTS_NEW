@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+
+namespace SparkInventory.DAL
+{
+    public class Cash_Memo_Description_Management
+    {
+        #region"Variable"
+
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionStr"].ConnectionString);
+        SqlDataAdapter sda;
+        SqlCommand cmd;
+        DataSet ds;
+        DataTable dt;
+
+        #endregion
+
+        #region property
+
+        public int Description_id { get; set; }
+        public int Cash_Memo_id { get; set; }
+        public string Description { get; set; }
+        public double Quantity { get; set; }
+        public double Rate { get; set; }
+        public string SpOperation { get; set; }
+
+        #endregion
+
+        #region "Function"
+
+        public void AddwithParameter(SqlCommand Command)
+        {
+            if (Description_id > 0)
+                Command.Parameters.Add(new SqlParameter("@DESCRIPTION_ID", SqlDbType.Int)).Value = Description_id;
+            else
+                Command.Parameters.Add(new SqlParameter("@DESCRIPTION_ID", SqlDbType.Int)).Value = DBNull.Value;
+
+            if (Cash_Memo_id > 0)
+                Command.Parameters.Add(new SqlParameter("@CASH_MEMO_ID", SqlDbType.Int)).Value = Cash_Memo_id;
+            else
+                Command.Parameters.Add(new SqlParameter("@CASH_MEMO_ID", SqlDbType.Int)).Value = DBNull.Value;
+
+            if (Description != string.Empty && Description != null)
+                Command.Parameters.Add(new SqlParameter("@DESCRIPTION", SqlDbType.VarChar)).Value = Description;
+            else
+                Command.Parameters.Add(new SqlParameter("@DESCRIPTION", SqlDbType.VarChar)).Value = DBNull.Value;
+
+            if (Quantity > 0)
+                Command.Parameters.Add(new SqlParameter("@QUANTITY", SqlDbType.Decimal)).Value = Quantity;
+            else
+                Command.Parameters.Add(new SqlParameter("@QUANTITY", SqlDbType.Decimal)).Value = DBNull.Value;
+
+            if (Rate > 0)
+                Command.Parameters.Add(new SqlParameter("@RATE", SqlDbType.Decimal)).Value = Rate;
+            else
+                Command.Parameters.Add(new SqlParameter("@RATE", SqlDbType.Decimal)).Value = DBNull.Value;
+
+            if (SpOperation != string.Empty && SpOperation != null)
+                Command.Parameters.Add(new SqlParameter("@SP_OPERATION", SqlDbType.VarChar)).Value = SpOperation;
+            else
+                Command.Parameters.Add(new SqlParameter("@SP_OPERATION", SqlDbType.VarChar)).Value = DBNull.Value;
+        }
+
+        public DataTable SaveCashMemoDescription()
+        {
+            cmd = new SqlCommand("CASH_MEMO_DESCRIPTION_MANAGEMENT", con);
+            AddwithParameter(cmd);
+            DataTable DataTableMaterial = new DataTable();
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            sda = new SqlDataAdapter(cmd);
+            sda.Fill(DataTableMaterial);
+
+            return DataTableMaterial;
+
+        }
+        #endregion
+    }
+}

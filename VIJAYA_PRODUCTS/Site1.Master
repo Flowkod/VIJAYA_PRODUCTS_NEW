@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RCandJJ.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vijaya Products Invoice</title>
+    <link rel="icon" href="images/vijayalogo.png" type="img/jpg"/>
+    <link rel="stylesheet" href="../lib/Hover/hover.css" />
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../lib/weather-icons/css/weather-icons.css" />
+    <link rel="stylesheet" href="../lib/ionicons/css/ionicons.css" />
+    <link rel="stylesheet" href="../lib/timepicker/jquery.timepicker.css">
+    <link rel="stylesheet" href="../lib/jquery-toggles/toggles-full.css" />
+    <link rel="stylesheet" href="../lib/morrisjs/morris.css" />
+    <link rel="stylesheet" href="../css/quirk.css" />
+    <link rel="stylesheet" href="../lib/jquery.steps/jquery.steps.css" />
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/select2/select2.css">
+    <script src="alertifyjs/alertify.js" type="text/javascript"></script>
+    <link href="alertifyjs/css/alertify.css" rel="stylesheet" type="text/css" />
+    <link href="alertifyjs/css/themes/default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../lib/modernizr/modernizr.js"></script>
+    <style type="text/css">
+        .control-label
+        {
+            padding-top: 10px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="headerpanel">
+        <div class="logopanel">
+        <center>
+            <h2>
+                <a href="Home.aspx"><img src="images/vijayalogo.png" alt="" width="80%" /> </a></h2></center>
+        </div>
+        <!-- logopanel -->
+        <div class="headerbar">
+            <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+            <div class="header-right">
+                <ul class="headermenu">
+                    <li>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                               <%-- <img src="images/vijayalogo.png" alt="" />--%>
+                                Invoice <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="ResetPassword.aspx"><i class="fa fa-cog"></i>Account Settings</a></li>
+                                <li>
+                                    <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click"><i class="fa fa-sign-out"></i> Log Out</asp:LinkButton></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- header-right -->
+        </div>
+        <!-- headerbar -->
+    </div>
+    <section>
+  <div class="leftpanel">
+    <div class="leftpanelinner">
+
+     
+      <div class="tab-content">
+
+        <!-- ################# MAIN MENU ################### -->
+
+        <div class="tab-pane active" id="mainmenu">         
+          <ul class="nav nav-pills nav-stacked nav-quirk">
+            <li class="active"><a href="index.aspx"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+          </ul>
+
+          <ul class="nav nav-pills nav-stacked nav-quirk">
+           <li runat="server" id="gst"><a href="AddGst.aspx"><i class="fa fa-shopping-cart"></i> <span>GST</span></a> </li>
+           <li runat="server" id="client" class="nav-parent"><a href=""><i class="fa fa-user"></i> <span>Client</span></a>
+              <ul class="children">
+                <li><a href="AddClient.aspx">Add Client</a></li>
+                <li><a href="ClientReport.aspx">Client Report</a></li>
+              </ul>
+            </li>
+           <li><a href="Material.aspx"><i class="fa fa-shopping-cart"></i> <span>Material</span></a></li>
+           <li><a href="InvoiceForm.aspx"><i class="fa fa-check-square"></i> <span>Invoice</span></a></li>
+           <li><a href="ShopsInvoice.aspx"><i class="fa fa-check-square"></i> <span>Day Invoice</span></a></li>
+           <li><a href="PurchaseOrder.aspx"><i class="fa fa-check-square"></i> <span>Purchase Order</span></a></li>
+           <li><a href="PurchaseRegister.aspx"><i class="fa fa-check-square"></i> <span>Purchase Register</span></a></li>
+            <li class="nav-parent" runat="server" id="Li1">
+              <a href=""><i class="fa fa-file"></i> <span>Reports</span></a>
+              <ul class="children">
+                <li><a href="Invoice_Report.aspx">Invoice Report</a></li>
+                  <li><a href="ShopInvoice_Report.aspx">Day Invoice Report</a></li>
+                <li><a href="PurchaseOrderReport.aspx">Purchase Order Report</a></li>
+                <li><a href="PurchaseRegisterReport.aspx">Purchase Register Report</a></li>
+                <li><a href="SalesReport.aspx">Sales Register Report</a></li>
+                <li><a href="LedgerReport.aspx">Ledger Report</a></li>
+              </ul>
+            </li>    
+             <li><a href="AddFund.aspx"><i class="fa fa-money"></i> <span>Add Fund</span></a></li>
+              <li><a href="CreditDebit.aspx"><i class="fa fa-money"></i> <span>Credit/Debit Entry</span></a></li>
+             <li><a href="CashVoucher.aspx"><i class="fa fa-money"></i> <span>Cash Voucher</span></a></li>
+             <li><a href="Letterhead.aspx"><i class="fa fa-file"></i> <span>Letter Head</span></a></li>     
+          </ul>
+        </div><!-- tab-pane -->
+      </div><!-- tab-content -->
+
+    </div><!-- leftpanelinner -->
+  </div><!-- leftpanel -->
+
+  <!-- mainpanel -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </section>
+    <script type="text/javascript" src="../lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui/jquery-ui.js"></script>
+    <script src="../lib/timepicker/jquery.timepicker.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../lib/jquery-toggles/toggles.js"></script>
+    <script type="text/javascript" src="../lib/morrisjs/morris.js"></script>
+    <script type="text/javascript" src="../lib/raphael/raphael.js"></script>
+    <script type="text/javascript" src="../lib/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="../lib/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="../lib/flot-spline/jquery.flot.spline.js"></script>
+    <script type="text/javascript" src="../lib/jquery-knob/jquery.knob.js"></script>
+    <script type="text/javascript" src="../js/quirk.js"></script>
+    <script type="text/javascript" src="../lib/jquery.steps/jquery.steps.js"></script>
+    <script type="text/javascript" src="../lib/jquery-validate/jquery.validate.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#wizard-basic2').steps({
+                headerTag: 'h3',
+                bodyTag: 'div',
+                transitionEffect: 'slideLeft',
+                autoFocus: true
+
+            });
+        });
+</script>
+    <script src="../lib/jquery-autosize/autosize.js"></script>
+    <script src="../lib/select2/select2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            // Textarea Auto Resize
+            autosize($('#autosize'));
+
+            // Select2 Box
+            $("select[id^='ContentPlaceHolder1_auto']").each(function () {
+                $("#" + this.id).select2({ tags: true });
+            });
+
+
+            $("select[id^='ContentPlaceHolder1_grdProduct_auto']").each(function () {
+                $("#" + this.id).select2({ tags: true });
+            });
+
+            //$('#ContentPlaceHolder1_auto, #select2, #select3').select2();
+            $("#select4").select2({ maximumSelectionLength: 2 });
+            $("#select5").select2({ minimumResultsForSearch: Infinity });
+            $("#select6").select2({ tags: true });
+
+            // Toggles
+            $('.toggle').toggles({
+                on: true,
+                height: 26
+            });
+
+            $('#ContentPlaceHolder1_txtCalender').datepicker({ dateFormat: 'dd M yy' });
+
+            
+
+            $('#datepicker-inline').datepicker();
+            $('#datepicker-multiple').datepicker({ numberOfMonths: 2 });
+
+            // Input Masks
+            $("#date").mask("99/999/9999");
+            $("#phone").mask("(999) 999-9999");
+            $("#ssn").mask("999-99-9999");
+
+            // Date Picker
+
+
+            // Time Picker
+            $('#tpBasic').timepicker();
+            $('#tp2').timepicker({ 'scrollDefault': 'now' });
+            $('#tp3').timepicker();
+
+            $('#setTimeButton').on('click', function () {
+                $('#tp3').timepicker('setTime', new Date());
+            });
+
+            // Colorpicker
+            $('#colorpicker1').colorpicker();
+            $('#colorpicker2').colorpicker({
+                customClass: 'colorpicker-lg',
+                sliders: {
+                    saturation: {
+                        maxLeft: 200,
+                        maxTop: 200
+                    },
+                    hue: { maxTop: 200 },
+                    alpha: { maxTop: 200 }
+                }
+            });
+        });
+
+        function auto() {
+
+            // Textarea Auto Resize
+            autosize($('#autosize'));
+
+            // Select2 Box
+            $("select[id^='ContentPlaceHolder1_auto']").each(function () {
+                $("#" + this.id).select2();
+            });
+
+            $("select[id^='ContentPlaceHolder1_grdProduct_auto']").each(function () {
+                $("#" + this.id).select2({ tags: true });
+            });
+
+            //$('#ContentPlaceHolder1_select1, #select2, #select3').select2();
+            $("#select4").select2({ maximumSelectionLength: 2 });
+            $("#select5").select2({ minimumResultsForSearch: Infinity });
+            $("#select6").select2({ tags: true });
+
+            // Toggles
+            $('.toggle').toggles({
+                on: true,
+                height: 26
+            });
+
+            // Input Masks
+            $("#date").mask("99/99/9999");
+            $("#phone").mask("(999) 999-9999");
+            $("#ssn").mask("999-99-9999");
+
+            // Date Picker
+            $('#datepicker').datepicker();
+            $('#datepicker-inline').datepicker();
+            $('#datepicker-multiple').datepicker({ numberOfMonths: 2 });
+
+            // Time Picker
+            $('#tpBasic').timepicker();
+            $('#tp2').timepicker({ 'scrollDefault': 'now' });
+            $('#tp3').timepicker();
+
+            $('#setTimeButton').on('click', function () {
+                $('#tp3').timepicker('setTime', new Date());
+            });
+
+            // Colorpicker
+            $('#colorpicker1').colorpicker();
+            $('#colorpicker2').colorpicker({
+                customClass: 'colorpicker-lg',
+                sliders: {
+                    saturation: {
+                        maxLeft: 200,
+                        maxTop: 200
+                    },
+                    hue: { maxTop: 200 },
+                    alpha: { maxTop: 200 }
+                }
+            });
+
+        };
+
+    </script>
+    </form>
+</body>
+</html>
